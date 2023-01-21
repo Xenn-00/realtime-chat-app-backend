@@ -5,7 +5,11 @@ const typeDefs = gql`
     id: String
     sender: User
     body: String
-    createdAt: String
+    image: String
+    createdAt: Date
+  }
+  type Query {
+    messages(conversationId: String): [Message]
   }
 
   type Mutation {
