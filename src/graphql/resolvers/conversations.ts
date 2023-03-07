@@ -27,15 +27,6 @@ const resolvers = {
 
       try {
         const conversations = await prisma.conversation.findMany({
-          // where: {
-          //   participants: {
-          //     some: {
-          //       userId: {
-          //         equals: userId,
-          //       },
-          //     },
-          //   },
-          // },
           include: conversationPopulated,
         });
 
